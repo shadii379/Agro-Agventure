@@ -1,0 +1,32 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'shop_index.html' %}
+{% block body %}
+<body>
+<form action="PRODUCT_REQUEST" method="post"><table width="200" border="1"  class="table table-striped">
+  <tr>
+    <th>Product Name</th>
+    <th>Discription</th>
+    <th>Image</th>
+    <th>Quantity</th>
+    <th>Price</th>
+  </tr>
+  {% for i in v%}
+  <tr>
+    <td>{{i[2]}}</td>
+    <td>&nbsp; {{i[3]}}</td>
+    <td>&nbsp;<img src="../static/uploads/{{i[4]}} " width="200px" height="200px">{{i[4]}}</td>
+    <td>&nbsp;{{i[5]}}</td>
+    <td>&nbsp;{{i[6]}}</td>
+
+    <td><a href="/order?id={{i[0]}}&p={{i[6]}}#services">Add to cart</a></td>
+  </tr>
+  {% endfor %}
+</table>
+</form></body>
+<!--</html>-->
+{% endblock %}

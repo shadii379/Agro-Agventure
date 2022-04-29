@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.google.agroagventure">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AgroAgventure"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".View_result"></activity>
+        <activity android:name=".Crop_prediction" />
+        <activity android:name=".Customimg" />
+        <activity android:name=".Equipment_payment" />
+        <activity android:name=".View_equipmentcart" />
+        <activity android:name=".View_replay" />
+        <activity android:name=".custom4" />
+        <activity android:name=".custom2" />
+        <activity android:name=".custom3" />
+        <activity android:name=".Complaints" />
+        <activity android:name=".Payment" />
+        <activity android:name=".ViewOrders" />
+        <activity android:name=".ViewProductOrder" />
+        <activity android:name=".ViewOrderDetails" />
+        <activity android:name=".OrderAgricalturalEqupments" />
+        <activity android:name=".ViewAgricalturalEqupments" />
+        <activity android:name=".AddProducts" />
+        <activity android:name=".ViewProducts" />
+        <activity android:name=".farmerHome" />
+        <activity android:name=".home" />
+        <activity android:name=".rgistration" />
+        <activity android:name=".Login" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+</manifest>

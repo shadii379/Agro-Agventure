@@ -1,0 +1,42 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'admin_index.html' %}
+{% block body %}
+<body>
+<form action="ADD_KRISHIBAVAN_DETAILS#services" method="post">
+<table width="200" border="1" class="table table-striped">
+  <tr>
+    <th>&nbsp;Place</td>
+    <th>Post</th>
+    <th>Pin</th>
+    <th>District</th>
+    <th>Phone</th>
+    <th>&nbsp;</th>
+  </tr>
+  {% for i in val %}
+  <tr>
+    <td>&nbsp;{{i[2]}}</td>
+    <td>&nbsp;{{i[3]}}</td>
+    <td>{{i[4]}}</td>
+    <td>&nbsp;{{i[5]}}</td>
+    <td>&nbsp;{{i[6]}}</td>
+    <td><a href="EDIT_KRISHIBAVAN_DETAILS?id={{i[0]}}#services">Edit</a><br>
+      <a href="/delete_kb_details?id={{i[0]}}">delete</a>
+
+      </tr>
+{% endfor %}
+   <tr> <td colspan="6"  >
+      <div align="center">
+        <input type="submit" name="Submit" value="Add" />
+        </div>
+    </td>
+  </tr>
+</table></form>
+</body>
+<!--</html>-->
+
+{% endblock %}

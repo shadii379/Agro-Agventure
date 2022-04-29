@@ -1,0 +1,19 @@
+{% extends 'main_index.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="login">
+  <table width="200" border="1" class="table table-striped">
+    <tr>
+      <th scope="row">username</th>
+      <td><input type="text" name="textfield" required/></td>
+    </tr>
+    <tr>
+      <th scope="row">password</th>
+      <td><input type="password" name="textfield2" required /></td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row"><input type="submit" name="Submit" value="Login" align="center"/></th>
+    </tr>
+
+  </table>
+</form>
+{% endblock %}

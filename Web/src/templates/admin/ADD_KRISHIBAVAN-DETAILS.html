@@ -1,0 +1,50 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'admin_index.html' %}
+{% block body %}
+<body>
+<form action="krishibhavan" method="post">
+<table width="200" border="1" class="table table-striped">
+  <tr>
+    <td>Place</td>
+    <td><input type="text" name="textfield" required pattern="[A-z a-z]{3,25}"/></td>
+  </tr>
+  <tr>
+    <td>Post</td>
+    <td><input type="text" name="textfield2" required pattern="[A-Z a-z]{3,25}"/></td>
+  </tr>
+  <tr>
+    <td>Pin</td>
+    <td><input type="text" name="textfield3" required pattern="[0-9]{6}"/></td>
+  </tr>
+  <tr>
+    <td>District</td>
+    <td><input type="text" name="textfield4" required pattern="[A-z a-z]{3,25}" /></td>
+  </tr>
+  <tr>
+    <td>Phone</td>
+    <td><input type="text" name="textfield5" required pattern="[6789][0-9]{9}"/></td>
+  </tr>
+  <tr>
+    <td>User_Name</td>
+    <td><input type="text" name="textfield6" required pattern="[A-Za-z]{3,25}"/></td>
+  </tr>
+  <tr>
+    <td>Password</td>
+    <td><input type="password" name="textfield7" required pattern="[A-Z a-z 0-9]{8,12}"/></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <input type="submit" name="Submit" value="Add" /></td>
+    </tr>
+
+
+</table>
+</form>
+</body>
+<!--</html>-->
+{% endblock %}

@@ -1,0 +1,40 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'krishibhavan_index.html' %}
+{% block body %}
+<body>
+<form action="edit_agri_equpments" method="post" enctype="multipart/form-data">
+  <table width="200" border="1"  class="table table-striped">
+  <tr>
+    <td>Name</td>
+    <td><input type="text" name="textfield" value="{{v[1]}}"required pattern="[A-Za-z]{3,25}" /></td>
+  </tr>
+  <tr>
+    <td>Image</td>
+    <td><input type="file" name="file" value="{{v[2]}}" /></td>
+  </tr>
+  <tr>
+    <td>Price</td>
+    <td><input type="number" name="textfield2" value="{{v[4]}}" required  /></td>
+  </tr>
+  <tr>
+    <td>Discription</td>
+    <td><textarea name="textarea" required pattern="[A-Z, a-z]">{{v[3]}}</textarea></td>
+  </tr>
+  <tr>
+    <td colspan="2"><div align="center">
+      <input type="submit" name="Submit" value="Update" />
+    </div></td>
+    </tr>
+</table>
+</form></body>
+
+
+
+<!--</html>-->
+{% endblock %}
+

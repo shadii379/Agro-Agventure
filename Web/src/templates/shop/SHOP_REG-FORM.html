@@ -1,0 +1,48 @@
+{% extends 'main_index.html' %}
+{% block body %}
+<form action="SHOP_REG_FORM1" method="post">
+  <table width="200" border="1"  class="table table-striped">
+  <tr>
+    <td>Shop_Name</td>
+    <td><input type="text" name="textfield" required pattern="[A-z a-z]{3,25}"/></td>
+  </tr>
+  <tr>
+    <td>Place</td>
+    <td><input type="text" name="textfield2" required  ></td>
+  </tr>
+  <tr>
+    <td>Post</td>
+    <td><input type="text" name="textfield3" required  /></td>
+  </tr>
+  <tr>
+    <td>Pin</td>
+    <td><input type="text" name="textfield4" required  pattern="[0-9]{6}" /></td>
+  </tr>
+  <tr>
+    <td>District</td>
+    <td><input type="text" name="textfield5" required  /></td>
+  </tr>
+  <tr>
+    <td>Phone</td>
+    <td><input type="text" name="textfield6" required  pattern ="[9876][0-9]{9}"/></td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td><input type="text" name="textfield7" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" /></td>
+  </tr>
+  <tr>
+    <td>User_Name</td>
+    <td><input type="text" name="textfield8" required /></td>
+  </tr>
+  <tr>
+    <td>Password</td>
+    <td><input type="password" name="password" required/></td>
+  </tr>
+  <tr>
+    <td colspan="2"><div align="center">
+      <input type="submit" name="Submit" value="Register" />
+    </div></td>
+    </tr>
+</table>
+</form>
+{% endblock %}

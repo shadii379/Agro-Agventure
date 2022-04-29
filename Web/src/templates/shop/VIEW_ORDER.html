@@ -1,0 +1,30 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'shop_index.html' %}
+{% block body %}
+<body>
+<form action="" method="get">
+  <table width="200" border="1"  class="table table-striped">
+  <tr>
+    <th>Date</th>
+
+    <th>Price</th>
+    <th>Status</th>
+    <th></th>
+  </tr>
+  {% for i in v %}
+  <tr>
+    <td>{{i[2]}}</td>
+    <td>&nbsp;{{i[3]}}</td>
+    <td>{{i[4]}}&nbsp;</td>
+    <td>{% if i[4] == 'cart' %} <a href="/book_now?id={{i[0]}}#serives">Book Now</a> {% elif i[4] == 'accepted' %}  <a href="/payment?id={{i[0]}}&price={{i[3]}}#services">Payment</a>{% else %} {% endif %}&nbsp;</td>
+  </tr>
+  {% endfor %}
+</table>
+</form></body>
+<!--</html>-->
+{% endblock %}
